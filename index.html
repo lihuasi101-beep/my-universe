@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="我的宇宙——记录喜欢、习惯、思考与正在成为的自己。">
+  <meta name="theme-color" content="#f4eadb">
+  <title>我的宇宙｜个人资料站</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="paper-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span class="brand-mark">✦</span>
+      <span>我的宇宙</span>
+    </a>
+    <nav aria-label="页面导航">
+      <a href="#about">此刻</a>
+      <a href="#music">音乐</a>
+      <a href="#movies">电影</a>
+      <a href="#habits">习惯</a>
+      <a href="#thoughts">思考</a>
+    </nav>
+    <button class="edit-button" id="edit-toggle" type="button" aria-pressed="false">
+      <span aria-hidden="true">✎</span> 编辑
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">PERSONAL ATLAS · 个人坐标</p>
+        <h1 id="hero-title">欢迎来到<br><em>我的宇宙</em></h1>
+        <p class="hero-intro editable" data-key="hero-intro">这里收藏我喜欢的声音、故事、日常习惯，以及那些还没有想完的念头。</p>
+        <a class="paper-link" href="#about">从此刻的我开始 <span>↓</span></a>
+      </div>
+      <div class="orbit-card" aria-label="个人宇宙插画">
+        <div class="orbit orbit-one"><i></i></div>
+        <div class="orbit orbit-two"><i></i></div>
+        <div class="planet">
+          <span>我</span>
+          <small>持续更新中</small>
+        </div>
+        <span class="star star-a">✦</span>
+        <span class="star star-b">✧</span>
+        <span class="star star-c">·</span>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <div>
+          <p class="kicker">RIGHT NOW</p>
+          <h2 id="about-title">此刻的我</h2>
+        </div>
+        <p class="section-note">人会改变，这里只负责诚实地记录当下。</p>
+      </div>
+      <div class="now-grid">
+        <article class="tape-card warm">
+          <span class="card-icon" aria-hidden="true">☀</span>
+          <p class="label">最近在意</p>
+          <h3 class="editable placeholder" data-key="now-care-title">点击编辑，写下一件事</h3>
+          <p class="editable placeholder" data-key="now-care-body">可以是一个目标、一个人，或一个刚冒出来的念头。</p>
+        </article>
+        <article class="tape-card green">
+          <span class="card-icon" aria-hidden="true">⌁</span>
+          <p class="label">正在学习</p>
+          <h3 class="editable placeholder" data-key="now-learn-title">最近想学会什么？</h3>
+          <p class="editable placeholder" data-key="now-learn-body">记录进度，也记录为什么想学。</p>
+        </article>
+        <article class="tape-card blue">
+          <span class="card-icon" aria-hidden="true">☁</span>
+          <p class="label">当前心情</p>
+          <h3 class="editable placeholder" data-key="now-mood-title">给今天一个形容词</h3>
+          <p class="editable placeholder" data-key="now-mood-body">天气、情绪、能量，都可以写在这里。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section music-section" id="music" aria-labelledby="music-title">
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <div>
+          <p class="kicker">ON REPEAT</p>
+          <h2 id="music-title">我爱听的歌</h2>
+        </div>
+        <p class="section-note">有些旋律，是生活的秘密注脚。</p>
+      </div>
+      <div class="record-shelf">
+        <article class="record-card">
+          <div class="record rust" aria-hidden="true"><span></span></div>
+          <div>
+            <p class="track-index">TRACK 01</p>
+            <h3 class="editable placeholder" data-key="song-1-title">歌曲名待填写</h3>
+            <p class="artist editable placeholder" data-key="song-1-artist">歌手 · 专辑</p>
+            <p class="memory editable placeholder" data-key="song-1-memory">写下你为什么喜欢它，或第一次听见它的时刻。</p>
+          </div>
+        </article>
+        <article class="record-card">
+          <div class="record olive" aria-hidden="true"><span></span></div>
+          <div>
+            <p class="track-index">TRACK 02</p>
+            <h3 class="editable placeholder" data-key="song-2-title">歌曲名待填写</h3>
+            <p class="artist editable placeholder" data-key="song-2-artist">歌手 · 专辑</p>
+            <p class="memory editable placeholder" data-key="song-2-memory">适合在什么样的天气、路上或心情里播放？</p>
+          </div>
+        </article>
+        <article class="record-card">
+          <div class="record navy" aria-hidden="true"><span></span></div>
+          <div>
+            <p class="track-index">TRACK 03</p>
+            <h3 class="editable placeholder" data-key="song-3-title">歌曲名待填写</h3>
+            <p class="artist editable placeholder" data-key="song-3-artist">歌手 · 专辑</p>
+            <p class="memory editable placeholder" data-key="song-3-memory">留一个位置给最近循环最多的那首歌。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="movies" aria-labelledby="movies-title">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <div>
+          <p class="kicker">STORIES I KEEP</p>
+          <h2 id="movies-title">我爱看的电影</h2>
+        </div>
+        <p class="section-note">看过的故事，也悄悄参与塑造了我。</p>
+      </div>
+      <div class="film-strip">
+        <article class="film-card">
+          <div class="film-number">01</div>
+          <p class="film-meta editable placeholder" data-key="movie-1-meta">年份 · 导演</p>
+          <h3 class="editable placeholder" data-key="movie-1-title">电影名待填写</h3>
+          <p class="editable placeholder" data-key="movie-1-note">它为什么留在了你的记忆里？</p>
+          <span class="rating editable placeholder" data-key="movie-1-rating">★★★★★</span>
+        </article>
+        <article class="film-card featured">
+          <div class="film-number">02</div>
+          <p class="film-meta editable placeholder" data-key="movie-2-meta">年份 · 导演</p>
+          <h3 class="editable placeholder" data-key="movie-2-title">电影名待填写</h3>
+          <p class="editable placeholder" data-key="movie-2-note">写下一句只属于你的观后感。</p>
+          <span class="rating editable placeholder" data-key="movie-2-rating">★★★★★</span>
+        </article>
+        <article class="film-card">
+          <div class="film-number">03</div>
+          <p class="film-meta editable placeholder" data-key="movie-3-meta">年份 · 导演</p>
+          <h3 class="editable placeholder" data-key="movie-3-title">电影名待填写</h3>
+          <p class="editable placeholder" data-key="movie-3-note">也许是会愿意反复重看的那一部。</p>
+          <span class="rating editable placeholder" data-key="movie-3-rating">★★★★★</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="habits" aria-labelledby="habits-title">
+      <div class="section-heading">
+        <span class="section-number">04</span>
+        <div>
+          <p class="kicker">LITTLE RITUALS</p>
+          <h2 id="habits-title">我的小习惯</h2>
+        </div>
+        <p class="section-note">重复的小事，构成了生活真正的纹理。</p>
+      </div>
+      <div class="habit-list">
+        <article class="habit"><span>01</span><div><h3 class="editable placeholder" data-key="habit-1-title">一个早晨习惯</h3><p class="editable placeholder" data-key="habit-1-body">它如何让一天开始得更舒服？</p></div></article>
+        <article class="habit"><span>02</span><div><h3 class="editable placeholder" data-key="habit-2-title">一个工作习惯</h3><p class="editable placeholder" data-key="habit-2-body">你保持专注的小方法。</p></div></article>
+        <article class="habit"><span>03</span><div><h3 class="editable placeholder" data-key="habit-3-title">一个生活习惯</h3><p class="editable placeholder" data-key="habit-3-body">也许不起眼，却很像你。</p></div></article>
+        <article class="habit"><span>04</span><div><h3 class="editable placeholder" data-key="habit-4-title">一个睡前习惯</h3><p class="editable placeholder" data-key="habit-4-body">用什么方式和今天告别？</p></div></article>
+      </div>
+    </section>
+
+    <section class="section thoughts-section" id="thoughts" aria-labelledby="thoughts-title">
+      <div class="section-heading">
+        <span class="section-number">05</span>
+        <div>
+          <p class="kicker">FIELD NOTES</p>
+          <h2 id="thoughts-title">最近在想</h2>
+        </div>
+        <p class="section-note">不必正确，不必完整，先把念头留下来。</p>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card">
+          <time class="editable placeholder" data-key="thought-1-date">日期待填写</time>
+          <h3 class="editable placeholder" data-key="thought-1-title">一个尚未想完的问题</h3>
+          <p class="editable placeholder" data-key="thought-1-body">把最近反复出现的念头写在这里。允许它矛盾，也允许它以后被推翻。</p>
+          <span class="note-pin" aria-hidden="true"></span>
+        </article>
+        <article class="note-card yellow">
+          <time class="editable placeholder" data-key="thought-2-date">日期待填写</time>
+          <h3 class="editable placeholder" data-key="thought-2-title">最近获得的一个答案</h3>
+          <p class="editable placeholder" data-key="thought-2-body">可能来自一本书、一段对话，或一次安静的独处。</p>
+          <span class="note-pin" aria-hidden="true"></span>
+        </article>
+        <article class="note-card pink">
+          <time class="editable placeholder" data-key="thought-3-date">日期待填写</time>
+          <h3 class="editable placeholder" data-key="thought-3-title">想对未来的自己说</h3>
+          <p class="editable placeholder" data-key="thought-3-body">留一句以后再回来看的话。</p>
+          <span class="note-pin" aria-hidden="true"></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="letter" aria-labelledby="letter-title">
+      <p class="kicker">A NOTE TO SELF</p>
+      <h2 id="letter-title">给未来的我</h2>
+      <p class="letter-body editable placeholder" data-key="future-letter">亲爱的未来的我：<br><br>这里还空着。等一个安静的晚上，写下你现在相信的事、想守住的东西，以及希望未来不要忘记的自己。</p>
+      <p class="signature editable placeholder" data-key="signature">—— 此刻的我</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>用喜欢的事物，慢慢拼出自己。</p>
+    <p>我的宇宙 · <span id="current-year"></span> · 最近保存于 <span id="last-saved">尚未编辑</span></p>
+  </footer>
+
+  <aside class="editor-panel" id="editor-panel" aria-hidden="true" aria-label="编辑工具">
+    <div>
+      <strong>编辑模式</strong>
+      <p>点击页面中的虚线文字即可修改，内容只保存在当前浏览器。</p>
+    </div>
+    <div class="editor-actions">
+      <button id="export-data" type="button">导出备份</button>
+      <label class="import-label">导入备份<input id="import-data" type="file" accept="application/json"></label>
+      <button id="reset-data" class="danger" type="button">恢复初始</button>
+      <button id="close-editor" class="primary" type="button">完成</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

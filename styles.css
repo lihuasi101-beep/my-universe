@@ -1,0 +1,198 @@
+:root {
+  --paper: #f7f0e5;
+  --paper-deep: #eee1d0;
+  --ink: #2e2924;
+  --muted: #74695f;
+  --rust: #b65d3d;
+  --olive: #68735b;
+  --navy: #42556c;
+  --gold: #d7a94f;
+  --line: rgba(65, 53, 43, 0.2);
+  --shadow: 0 16px 40px rgba(78, 58, 39, 0.09);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+.paper-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .28;
+  z-index: 10;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+}
+
+a { color: inherit; }
+button, input { font: inherit; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 72px;
+  padding: 12px clamp(20px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  background: rgba(247, 240, 229, .88);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+.brand { display: flex; align-items: center; gap: 10px; font-family: Georgia, "Songti SC", serif; font-size: 18px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.brand-mark { display: grid; place-items: center; width: 30px; height: 30px; color: var(--paper); background: var(--rust); border-radius: 50%; }
+nav { display: flex; gap: clamp(16px, 3vw, 36px); margin: 0 auto; }
+nav a { color: var(--muted); font-size: 14px; text-decoration: none; }
+nav a:hover { color: var(--rust); }
+.edit-button { border: 1px solid var(--ink); border-radius: 999px; padding: 7px 16px; background: transparent; color: var(--ink); cursor: pointer; }
+.edit-button:hover, .edit-button[aria-pressed="true"] { color: var(--paper); background: var(--ink); }
+
+main { overflow: hidden; }
+.hero {
+  max-width: 1240px;
+  min-height: 680px;
+  margin: auto;
+  padding: 96px 52px 110px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 70px;
+}
+.eyebrow, .kicker, .track-index, .label { letter-spacing: .16em; font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--rust); }
+.hero h1 { margin: 16px 0 24px; font: 400 clamp(62px, 8vw, 108px)/.96 Georgia, "Songti SC", serif; letter-spacing: -.05em; }
+.hero h1 em { color: var(--rust); font-weight: 400; }
+.hero-intro { max-width: 520px; color: var(--muted); font: 20px/1.9 Georgia, "Songti SC", serif; }
+.paper-link { display: inline-flex; gap: 14px; align-items: center; margin-top: 20px; font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--ink); }
+
+.orbit-card { position: relative; aspect-ratio: 1; max-width: 480px; width: 100%; margin: auto; }
+.planet { position: absolute; inset: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; color: #fffaf2; background: var(--rust); box-shadow: inset -18px -20px 0 rgba(83, 28, 14, .14), 12px 20px 34px rgba(104, 56, 36, .18); font: 72px/1 Georgia, serif; transform: rotate(-6deg); }
+.planet small { margin-top: 10px; font: 11px/1 system-ui, sans-serif; letter-spacing: .12em; }
+.orbit { position: absolute; inset: 12%; border: 1px dashed rgba(67, 55, 44, .35); border-radius: 50%; animation: rotate 24s linear infinite; }
+.orbit-two { inset: 2% 24%; animation-duration: 17s; animation-direction: reverse; transform: rotate(62deg); }
+.orbit i { position: absolute; width: 18px; height: 18px; top: 12%; left: 12%; background: var(--gold); border-radius: 50%; box-shadow: inset -3px -3px rgba(67, 55, 44, .18); }
+.orbit-two i { width: 12px; height: 12px; background: var(--navy); }
+.star { position: absolute; font-family: serif; color: var(--gold); }
+.star-a { top: 15%; right: 8%; font-size: 30px; }
+.star-b { bottom: 18%; left: 4%; font-size: 26px; }
+.star-c { top: 3%; left: 30%; font-size: 50px; }
+@keyframes rotate { to { transform: rotate(360deg); } }
+
+.section { max-width: 1240px; margin: 0 auto; padding: 100px 52px; }
+.section-heading { display: grid; grid-template-columns: auto 1fr minmax(220px, 360px); align-items: end; gap: 22px; padding-bottom: 34px; border-bottom: 1px solid var(--line); }
+.section-number { align-self: start; padding-top: 4px; color: var(--rust); font: italic 22px Georgia, serif; }
+.section-heading h2, .letter h2 { margin: 2px 0 0; font: 400 clamp(40px, 5vw, 64px)/1.05 Georgia, "Songti SC", serif; }
+.section-heading p { margin: 0; }
+.section-note { justify-self: end; color: var(--muted); font-family: Georgia, "Songti SC", serif; }
+
+.now-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-top: 48px; }
+.tape-card { position: relative; min-height: 260px; padding: 38px 34px; background: #f5dfca; box-shadow: var(--shadow); transform: rotate(-1.1deg); }
+.tape-card::before { content: ""; position: absolute; top: -14px; left: 50%; width: 92px; height: 28px; background: rgba(234, 212, 171, .65); transform: translateX(-50%) rotate(2deg); }
+.tape-card.green { background: #dce2d2; transform: rotate(1deg); }
+.tape-card.blue { background: #dbe4e8; transform: rotate(-.4deg); }
+.tape-card h3 { margin: 25px 0 10px; font: 26px/1.3 Georgia, "Songti SC", serif; }
+.tape-card p:last-child { color: var(--muted); }
+.card-icon { font-size: 30px; }
+
+.music-section { max-width: none; padding-left: max(52px, calc((100vw - 1136px)/2)); padding-right: max(52px, calc((100vw - 1136px)/2)); background: #eee1d1; }
+.record-shelf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; padding-top: 48px; }
+.record-card { min-width: 0; display: grid; grid-template-columns: 108px 1fr; gap: 24px; align-items: start; padding: 26px; background: rgba(255, 252, 246, .54); border: 1px solid rgba(74, 58, 44, .12); }
+.record { position: relative; width: 108px; aspect-ratio: 1; border-radius: 50%; background: repeating-radial-gradient(circle, #302b28 0 3px, #1f1c1a 4px 6px); box-shadow: 4px 8px 16px rgba(45, 35, 28, .22); }
+.record::after { content: ""; position: absolute; inset: 34%; border: 5px solid #d2b17c; border-radius: 50%; background: var(--rust); }
+.record.olive::after { background: var(--olive); }
+.record.navy::after { background: var(--navy); }
+.record h3, .record-card h3 { margin: 5px 0; font: 24px/1.3 Georgia, "Songti SC", serif; }
+.artist { margin: 0; color: var(--rust); font-size: 13px; }
+.memory { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+.film-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; padding-top: 48px; }
+.film-card { min-height: 310px; padding: 36px; border: 1px solid var(--line); border-right: 0; }
+.film-card:last-child { border-right: 1px solid var(--line); }
+.film-card.featured { color: #f9f0e4; background: var(--ink); transform: translateY(-14px); box-shadow: var(--shadow); }
+.film-number { color: var(--rust); font: italic 38px Georgia, serif; }
+.film-meta { margin: 28px 0 5px; color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.featured .film-meta { color: #c5b9ac; }
+.film-card h3 { margin: 0 0 14px; font: 28px/1.25 Georgia, "Songti SC", serif; }
+.film-card > p:last-of-type { color: var(--muted); }
+.featured > p:last-of-type { color: #ddd1c4; }
+.rating { display: block; margin-top: 28px; color: var(--gold); letter-spacing: .12em; }
+
+.habit-list { padding-top: 38px; }
+.habit { display: grid; grid-template-columns: 70px 1fr; gap: 22px; padding: 25px 10px; border-bottom: 1px solid var(--line); transition: padding .2s, background .2s; }
+.habit:hover { padding-left: 20px; background: rgba(255,255,255,.25); }
+.habit > span { color: var(--rust); font: italic 20px Georgia, serif; }
+.habit h3 { margin: 0 0 5px; font: 23px/1.3 Georgia, "Songti SC", serif; }
+.habit p { margin: 0; color: var(--muted); }
+
+.thoughts-section { max-width: none; padding-left: max(52px, calc((100vw - 1136px)/2)); padding-right: max(52px, calc((100vw - 1136px)/2)); background: #e7e6dc; }
+.notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding-top: 54px; }
+.note-card { position: relative; min-height: 320px; padding: 42px 36px; background: #d8e0d1; box-shadow: 4px 8px 18px rgba(60, 52, 42, .1); transform: rotate(-1deg); }
+.note-card.yellow { background: #eddfb5; transform: rotate(1.3deg); }
+.note-card.pink { background: #ead2c6; transform: rotate(-.3deg); }
+.note-card time { color: var(--rust); font-size: 12px; letter-spacing: .08em; }
+.note-card h3 { margin: 28px 0 14px; font: 26px/1.35 Georgia, "Songti SC", serif; }
+.note-card p { color: #655b52; }
+.note-pin { position: absolute; top: 16px; left: 50%; width: 10px; height: 10px; background: var(--rust); border-radius: 50%; box-shadow: 1px 2px 3px rgba(0,0,0,.25); }
+
+.letter { max-width: 900px; margin: 120px auto; padding: 72px clamp(32px, 8vw, 90px); background: #fbf6ee; box-shadow: var(--shadow); border: 1px solid rgba(75,58,42,.1); transform: rotate(.2deg); }
+.letter-body { margin-top: 38px; color: var(--muted); font: 18px/2 Georgia, "Songti SC", serif; }
+.signature { margin-top: 32px; text-align: right; font-family: Georgia, "Songti SC", serif; }
+
+footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px max(30px, calc((100vw - 1136px)/2)); color: #d8cdc0; background: var(--ink); font-size: 12px; }
+
+.editor-panel { position: fixed; z-index: 50; right: 24px; bottom: 24px; width: min(560px, calc(100vw - 48px)); padding: 20px; display: none; gap: 18px; align-items: center; color: #f8efe4; background: var(--ink); border-radius: 12px; box-shadow: 0 18px 60px rgba(27,21,17,.3); }
+.editor-panel.open { display: flex; }
+.editor-panel strong { font-family: Georgia, serif; font-size: 18px; }
+.editor-panel p { margin: 2px 0 0; color: #c9bdb0; font-size: 12px; line-height: 1.5; }
+.editor-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; justify-content: flex-end; }
+.editor-actions button, .import-label { padding: 6px 10px; color: #f8efe4; background: transparent; border: 1px solid #75695d; border-radius: 6px; font-size: 12px; cursor: pointer; }
+.editor-actions .primary { color: var(--ink); background: #f8efe4; }
+.editor-actions .danger { color: #efb09d; }
+.import-label input { display: none; }
+.editing .editable { outline: 1px dashed rgba(182, 93, 61, .7); outline-offset: 5px; cursor: text; border-radius: 2px; }
+.editing .editable:focus { outline: 2px solid var(--rust); background: rgba(255,255,255,.2); }
+.placeholder { opacity: .76; }
+.editing .placeholder { opacity: 1; }
+.toast { position: fixed; z-index: 60; left: 50%; bottom: 26px; padding: 9px 16px; color: #fff; background: var(--rust); border-radius: 999px; font-size: 13px; opacity: 0; transform: translate(-50%, 15px); pointer-events: none; transition: .25s; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 900px) {
+  nav { display: none; }
+  .edit-button { margin-left: auto; }
+  .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 70px; }
+  .orbit-card { max-width: 360px; }
+  .section-heading { grid-template-columns: auto 1fr; }
+  .section-note { display: none; }
+  .now-grid, .record-shelf, .notes-grid { grid-template-columns: 1fr; }
+  .film-strip { grid-template-columns: 1fr; gap: 16px; }
+  .film-card, .film-card:last-child { border: 1px solid var(--line); }
+  .film-card.featured { transform: none; }
+  .editor-panel { align-items: flex-start; flex-direction: column; }
+  .editor-actions { margin: 0; justify-content: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .site-header { min-height: 60px; padding: 10px 18px; }
+  .brand-mark { width: 26px; height: 26px; }
+  .hero, .section, .music-section, .thoughts-section { padding-left: 22px; padding-right: 22px; }
+  .hero { padding-top: 58px; padding-bottom: 72px; gap: 42px; }
+  .hero h1 { font-size: 58px; }
+  .hero-intro { font-size: 17px; }
+  .section { padding-top: 72px; padding-bottom: 72px; }
+  .section-heading h2 { font-size: 40px; }
+  .record-card { grid-template-columns: 74px 1fr; padding: 20px; }
+  .record { width: 74px; }
+  .habit { grid-template-columns: 42px 1fr; }
+  .letter { margin: 60px 18px; padding: 48px 28px; }
+  footer { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .orbit { animation: none; }
+}
