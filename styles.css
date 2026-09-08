@@ -157,6 +157,14 @@ main { overflow: hidden; }
 .idea-values dd { margin: 0; color: var(--muted); }
 .idea-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
 .idea-tags span { padding: 5px 11px; color: var(--olive); border: 1px solid rgba(104, 115, 91, .45); border-radius: 999px; font-size: 12px; }
+.alliance-idea { margin-top: 86px; padding-top: 80px; border-top: 1px solid var(--line); }
+.game-idea-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
+.game-idea-gallery figure { margin: 0; padding: 9px 9px 34px; background: #fffaf2; box-shadow: 0 10px 24px rgba(78, 58, 39, .1); }
+.game-idea-gallery figure:nth-child(1) { transform: rotate(-1.5deg); }
+.game-idea-gallery figure:nth-child(2) { transform: translateY(18px) rotate(1deg); }
+.game-idea-gallery figure:nth-child(3) { transform: rotate(-.5deg); }
+.game-idea-gallery img { display: block; width: 100%; height: 320px; object-fit: cover; object-position: top center; }
+.game-idea-gallery figcaption { padding-top: 9px; color: var(--muted); font: 12px/1.4 Georgia, "Songti SC", serif; text-align: center; }
 
 .letter { max-width: 900px; margin: 120px auto; padding: 72px clamp(32px, 8vw, 90px); background: #fbf6ee; box-shadow: var(--shadow); border: 1px solid rgba(75,58,42,.1); transform: rotate(.2deg); }
 .letter-body { margin-top: 38px; color: var(--muted); font: 18px/2 Georgia, "Songti SC", serif; }
@@ -191,6 +199,8 @@ footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px
   .now-grid, .record-shelf, .notes-grid { grid-template-columns: 1fr; }
   .game-idea { grid-template-columns: 1fr; }
   .game-idea-visual { width: min(100%, 480px); margin: 0 auto; }
+  .game-idea-gallery { width: min(100%, 520px); margin: 0 auto; }
+  .game-idea-gallery img { height: 260px; }
   .film-strip { grid-template-columns: 1fr; gap: 16px; }
   .film-card, .film-card:last-child { border: 1px solid var(--line); }
   .film-card.featured { transform: none; }
@@ -214,6 +224,10 @@ footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px
   .habit { grid-template-columns: 42px 1fr; }
   .game-idea-copy h3 { font-size: 36px; }
   .idea-values > div { grid-template-columns: 1fr; gap: 5px; }
+  .alliance-idea { margin-top: 62px; padding-top: 60px; }
+  .game-idea-gallery { grid-template-columns: 1fr 1fr; }
+  .game-idea-gallery figure:last-child { grid-column: 1 / -1; width: 50%; justify-self: center; }
+  .game-idea-gallery img { height: auto; max-height: 360px; object-fit: contain; background: #eee5d9; }
   .letter { margin: 60px 18px; padding: 48px 28px; }
   footer { flex-direction: column; }
 }
