@@ -211,7 +211,13 @@
         </div>
         <p class="section-note">记录值得继续推演的机制灵感。</p>
       </div>
-      <article class="game-idea">
+      <div class="idea-filters" role="group" aria-label="按类别筛选游戏想法">
+        <button class="idea-filter active" type="button" data-filter="all" aria-pressed="true">全部 <span>3</span></button>
+        <button class="idea-filter" type="button" data-filter="base" aria-pressed="false">基地经营 <span>1</span></button>
+        <button class="idea-filter" type="button" data-filter="alliance" aria-pressed="false">同盟玩法 <span>2</span></button>
+      </div>
+      <div class="game-ideas-list" aria-live="polite">
+      <article class="game-idea" data-category="base">
         <figure class="game-idea-visual">
           <img src="assets/game-idea-building-synergy.jpg" alt="基地内同类生产建筑相邻摆放并显示产出提升提示的游戏参考画面" loading="lazy">
           <figcaption>参考画面 · 相邻建筑与产出提升反馈</figcaption>
@@ -237,7 +243,7 @@
           </div>
         </div>
       </article>
-      <article class="game-idea alliance-idea">
+      <article class="game-idea alliance-idea" data-category="alliance">
         <div class="game-idea-copy">
           <p class="idea-date">2026年9月8日 · 同盟社交</p>
           <h3>同盟事件统一入口</h3>
@@ -277,6 +283,43 @@
           </figure>
         </div>
       </article>
+      <article class="game-idea alliance-idea donation-idea" data-category="alliance">
+        <div class="comparison-gallery" aria-label="LastWar 与 LastThrone 联盟捐献反馈对比">
+          <figure>
+            <img src="assets/game-idea-donation/lastwar-critical-feedback.png" alt="LastWar 联盟捐献暴击反馈参考画面" loading="lazy">
+            <figcaption><strong>LastWar</strong><span>暴击文字与奖励集中爆发，视觉焦点明确</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/game-idea-donation/lastthrone-donation-feedback.png" alt="LastThrone 联盟捐献反馈参考画面" loading="lazy">
+            <figcaption><strong>LastThrone</strong><span>奖励分散移动，节奏与聚焦相对平淡</span></figcaption>
+          </figure>
+        </div>
+        <div class="game-idea-copy">
+          <p class="idea-date">2026年9月10日 · 同盟玩法</p>
+          <h3>强化联盟捐献的暴击聚焦与奖励节奏</h3>
+          <p class="idea-lead">我方 LastThrone 的联盟捐献反馈，在暴击聚焦上不如 LastWar 清晰；奖励停滞和分散的节奏也略显平淡。</p>
+          <dl class="idea-values">
+            <div>
+              <dt>当前问题</dt>
+              <dd>暴击信息与奖励表现没有形成统一视觉焦点，奖励分散、停滞的运动节奏削弱了瞬间惊喜。</dd>
+            </div>
+            <div>
+              <dt>优化方向</dt>
+              <dd>暴击发生时集中强化倍率、核心奖励和落点反馈；让奖励先快速聚合爆发，再有序进入进度或资产区域。</dd>
+            </div>
+            <div>
+              <dt>体验目标</dt>
+              <dd>让玩家一眼看懂“触发了暴击、获得了更多”，提升每次捐献的爽感与继续操作的意愿。</dd>
+            </div>
+          </dl>
+          <div class="idea-tags" aria-label="想法标签">
+            <span>联盟捐献</span>
+            <span>暴击反馈</span>
+            <span>奖励动效</span>
+          </div>
+        </div>
+      </article>
+      </div>
     </section>
 
     <section class="letter" aria-labelledby="letter-title">

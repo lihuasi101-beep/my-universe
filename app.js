@@ -9,6 +9,8 @@
   const resetButton = document.querySelector("#reset-data");
   const toast = document.querySelector("#toast");
   const editables = [...document.querySelectorAll(EDITABLE_SELECTOR)];
+  const ideaFilters = [...document.querySelectorAll(".idea-filter")];
+  const gameIdeas = [...document.querySelectorAll(".game-idea[data-category]")];
   let toastTimer;
 
   const showToast = (message) => {
@@ -99,6 +101,20 @@
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(`${STORAGE_KEY}-saved-at`);
     window.location.reload();
+  });
+
+  ideaFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.filter;
+      ideaFilters.forEach((filter) => {
+        const active = filter === button;
+        filter.classList.toggle("active", active);
+        filter.setAttribute("aria-pressed", String(active));
+      });
+      gameIdeas.forEach((idea) => {
+        idea.hidden = category !== "all" && idea.dataset.category !== category;
+      });
+    });
   });
 
   hydrate(readData());

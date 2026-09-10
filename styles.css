@@ -143,6 +143,13 @@ main { overflow: hidden; }
 .note-pin { position: absolute; top: 16px; left: 50%; width: 10px; height: 10px; background: var(--rust); border-radius: 50%; box-shadow: 1px 2px 3px rgba(0,0,0,.25); }
 
 .game-ideas-section { padding-top: 112px; }
+.idea-filters { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 34px; }
+.idea-filter { min-height: 38px; padding: 7px 13px; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+.idea-filter span { display: inline-grid; place-items: center; min-width: 20px; height: 20px; margin-left: 5px; color: var(--muted); background: rgba(65, 53, 43, .08); border-radius: 50%; font-size: 11px; }
+.idea-filter:hover, .idea-filter:focus-visible { color: var(--rust); border-color: var(--rust); }
+.idea-filter.active { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.idea-filter.active span { color: var(--ink); background: var(--paper); }
+.game-idea[hidden] { display: none; }
 .game-idea { display: grid; grid-template-columns: minmax(280px, .82fr) minmax(360px, 1.18fr); gap: clamp(40px, 7vw, 88px); align-items: center; padding-top: 54px; }
 .game-idea-visual { position: relative; margin: 0; padding: 14px 14px 48px; background: #fffaf2; box-shadow: var(--shadow); transform: rotate(-1deg); }
 .game-idea-visual::before { content: ""; position: absolute; z-index: 1; top: -12px; left: 50%; width: 104px; height: 26px; background: rgba(223, 199, 155, .72); transform: translateX(-50%) rotate(2deg); }
@@ -165,6 +172,13 @@ main { overflow: hidden; }
 .game-idea-gallery figure:nth-child(3) { transform: rotate(-.5deg); }
 .game-idea-gallery img { display: block; width: 100%; height: 320px; object-fit: cover; object-position: top center; }
 .game-idea-gallery figcaption { padding-top: 9px; color: var(--muted); font: 12px/1.4 Georgia, "Songti SC", serif; text-align: center; }
+.comparison-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.comparison-gallery figure { margin: 0; min-width: 0; background: #fffaf2; box-shadow: var(--shadow); }
+.comparison-gallery img { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; object-position: top center; }
+.comparison-gallery figcaption { display: grid; gap: 3px; min-height: 92px; padding: 14px 15px; }
+.comparison-gallery strong { color: var(--rust); font: 18px/1.2 Georgia, serif; }
+.comparison-gallery span { color: var(--muted); font-size: 12px; line-height: 1.55; }
+.donation-idea { grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr); }
 
 .letter { max-width: 900px; margin: 120px auto; padding: 72px clamp(32px, 8vw, 90px); background: #fbf6ee; box-shadow: var(--shadow); border: 1px solid rgba(75,58,42,.1); transform: rotate(.2deg); }
 .letter-body { margin-top: 38px; color: var(--muted); font: 18px/2 Georgia, "Songti SC", serif; }
@@ -200,6 +214,7 @@ footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px
   .game-idea { grid-template-columns: 1fr; }
   .game-idea-visual { width: min(100%, 480px); margin: 0 auto; }
   .game-idea-gallery { width: min(100%, 520px); margin: 0 auto; }
+  .comparison-gallery { width: min(100%, 560px); margin: 0 auto; }
   .game-idea-gallery img { height: 260px; }
   .film-strip { grid-template-columns: 1fr; gap: 16px; }
   .film-card, .film-card:last-child { border: 1px solid var(--line); }
@@ -228,6 +243,8 @@ footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px
   .game-idea-gallery { grid-template-columns: 1fr 1fr; }
   .game-idea-gallery figure:last-child { grid-column: 1 / -1; width: 50%; justify-self: center; }
   .game-idea-gallery img { height: auto; max-height: 360px; object-fit: contain; background: #eee5d9; }
+  .comparison-gallery { gap: 10px; }
+  .comparison-gallery figcaption { min-height: 112px; padding: 11px; }
   .letter { margin: 60px 18px; padding: 48px 28px; }
   footer { flex-direction: column; }
 }
