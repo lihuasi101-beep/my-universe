@@ -133,10 +133,11 @@ main { overflow: hidden; }
 .habit p { margin: 0; color: var(--muted); }
 
 .thoughts-section { max-width: none; padding-left: max(52px, calc((100vw - 1136px)/2)); padding-right: max(52px, calc((100vw - 1136px)/2)); background: #e7e6dc; }
-.notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding-top: 54px; }
+.notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; padding-top: 54px; }
 .note-card { position: relative; min-height: 320px; padding: 42px 36px; background: #d8e0d1; box-shadow: 4px 8px 18px rgba(60, 52, 42, .1); transform: rotate(-1deg); }
 .note-card.yellow { background: #eddfb5; transform: rotate(1.3deg); }
 .note-card.pink { background: #ead2c6; transform: rotate(-.3deg); }
+.note-card.cream { background: #f3e6d4; transform: rotate(.8deg); }
 .note-card time { color: var(--rust); font-size: 12px; letter-spacing: .08em; }
 .note-card h3 { margin: 28px 0 14px; font: 26px/1.35 Georgia, "Songti SC", serif; }
 .note-card p { color: #655b52; }
